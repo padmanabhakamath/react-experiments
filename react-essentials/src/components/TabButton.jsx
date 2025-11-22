@@ -1,8 +1,8 @@
 
-export default function TabButton({ children, onSelect}) { // object destructuring
+export default function TabButton({ children, onSelect, isSelected}) { // object destructuring
     console.log(' TAB BUTTON executing')
     return (<li>
-        <button onClick={onSelect}>{children}</button>
+        <button className={isSelected ? 'active' : ''} onClick={onSelect}>{children}</button>
         </li>
     );
 }

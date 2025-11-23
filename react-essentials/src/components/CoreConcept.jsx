@@ -1,10 +1,10 @@
-export default function CoreConcept({concept}){
-  const {title, description, image } = concept
+export default function CoreConcept({image, title, description}){
+  //const {image, title, description } = concept
   return (
     <li>
-      <img src={concept.image} alt={concept.title}></img>
-      <h3>{concept.title}</h3>
-      <p>{concept.description}</p>
+      <img src={image} alt={title}></img>
+      <h3>{title}</h3>
+      <p>{description}</p>
     </li>
   )
 }

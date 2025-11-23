@@ -41,13 +41,13 @@ function App() {
       <Header />
       <main>
         <section id="core-concepts">
-          <h2>Core Concepts</h2>
+          <h2>Core Concepts</h2>   
           <ul>
-            <CoreConcept concept={CORE_CONCEPTS[0]}/>
-            <CoreConcept concept={CORE_CONCEPTS[1]}/>
-            <CoreConcept concept={CORE_CONCEPTS[2]}/>
-            <CoreConcept concept={CORE_CONCEPTS[3]}/>
-          </ul>          
+            {CORE_CONCEPTS.map((conceptItem) => (
+              <CoreConcept key={conceptItem.title} {...conceptItem}/>
+            ))}  
+          </ul>      
+ 
         </section>   
         <section id="examples">
           <h2>Examples</h2>
